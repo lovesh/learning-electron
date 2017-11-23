@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Keygen using nacl</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Scripts -->
+  <script>
+    delete module.exports
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="./nacl-fast.min.js"></script>
+  <script src="./keygen_window.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <div id="container" class="container-fluid">
+
+    <!-- Input row -->
+    <!--<div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <h3 class="hash-heading">Seed</h3>
+        <input type="text" id="text-input" class="form-control text-input" placeholder="Enter seed and click Generate keypair">
+        </textarea>
+      </div>
+    </div>-->
+
+    <!-- Hex seed row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="hash-heading">Seed in Hex</h3>
+        <pre id="seed-hex-output" class="hash-output"> </pre>
+      </div>
+    </div>
+
+    <!-- Hex Signing key row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="hash-heading">Signing key in Hex</h3>
+        <pre id="sk-hex-output" class="hash-output"> </pre>
+      </div>
+    </div>
+
+    <!-- Base58 Signing key row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="hash-heading">Signing key in Base58</h3>
+        <pre id="sk-b58-output" class="hash-output"> </pre>
+      </div>
+    </div>
+
+    <!-- Hex Verkey row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="hash-heading">Verification key in Hex</h3>
+        <pre id="vk-hex-output" class="hash-output"> </pre>
+      </div>
+    </div>
+
+    <!-- Base58 Verkey row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="hash-heading">Verification key in Base58</h3>
+        <pre id="vk-b58-output" class="hash-output"> </pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <input type="submit" id="generate">Generate keypair</input>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
